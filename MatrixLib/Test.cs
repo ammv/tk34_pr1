@@ -159,6 +159,7 @@ class Test
 						break;
 			}
 		}
+		// Test Fraction methods
 		
 		Console.ReadLine();
 	}

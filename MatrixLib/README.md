@@ -40,20 +40,16 @@ Operations with matrices:
 | CutColumns(`int[]`) | Returns a matrix without the specified columns |
 | CutRow(`int`) | Returns a matrix without the specified row | 
 | CutRows(`int[]`) | Returns a matrix without the specified rows |
-<<<<<<< HEAD
 | Pow(`int`) | Returns a matrix to the specified power. `Power must be greater than zero` |  
 | Minor(`int`) | Returns the minor of the matrix of the first row and the specified column |
 | Minor(`int`, `int`) | Returns the minor of the matrix of the specified row and the specified column | 
 | AlgComp(`int`, `int`) | Returns the algebraic complement of the matrix of the specified row and the specified column |
-| Display(`string`, `bool`) | Outputs a matrix to the console with the specified text and a new line at the end if the |
-| | second parameter is **true**| 
-=======
+| Display(`string`, `bool`) | Outputs a matrix to the console with the specified text and a new line at the end if the<br>second parameter is **true**| 
 | Pow(`int`) | Returns a matrix to the specified power.<br> `Power must be greater than zero` |  
 | Minor(`int`) | Returns the minor of the matrix of the<br> first row and the specified column |
 | Minor(`int`, `int`) | Returns the minor of the matrix of the <br>specified row and the specified column | 
 | AlgComp(`int`, `int`) | Returns the algebraic complement of the matrix<br> of the specified row and the specified column |
 | Display(`string`, `bool`) | Outputs a matrix to the console with the specified text<br> and a new line at the end if the second parameter is **true**| 
->>>>>>> a041f51f3affa24b3b24c59a6f13081688cec432
 | SingleMatrix(`int`) |  Returns a unit matrix of size N x N |
 
 ## Fraction
