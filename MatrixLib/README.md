@@ -22,37 +22,33 @@ Operations with matrices:
 
 | Properties | What does |
 | ------ | ------ |
-| T | Returns the transposed matrix |
-| Rank | Returns the rank of the matrix |
-| Det | Returns the determinant of the matrix |
-| Inv | Returns the inverse matrix |
-| Rows | Returns the number of rows |
-| Columns | Returns the number of columns |
-| Red | Returns a reduced matrix |
+| T | `Matrix` | Returns the transposed matrix |
+| Rank | `int`| Returns the rank of the matrix |
+| Det | `Fraction` | Returns the determinant of the matrix |
+| Inv | `Matrix` | Returns the inverse matrix |
+| Rows | `int` |  Returns the number of rows |
+| Columns | `int` | Returns the number of columns |
+| Red | `Matrix` | Returns a reduced matrix |
 
-| Methods    | What does |
-| ------ | ------ |
-| Transpose | Returns the transposed matrix |
-| Determinant | Returns the determinant of the matrix |
-| CompareSizes(`Matrix`) | Checks whether the matrix is the <br>same as the other in size |
-| Clone | Returns a clone of the matrix |
-| EmptyMatrix(`int`, `int`) | Returns an N x M matrix filled with zeros |
-| CutColumn(`int`) | Returns a matrix without the specified column | 
-| CutColumns(`int[]`) | Returns a matrix without the specified columns |
-| CutRow(`int`) | Returns a matrix without the specified row | 
-| CutRows(`int[]`) | Returns a matrix without the specified rows |
-| Pow(`int`) | Returns a matrix to the specified power. `Power must be greater than zero` |  
-| Minor(`int`) | Returns the minor of the matrix of the <br>first row and the specified column |
-| Minor(`int`, `int`) | Returns the minor of the matrix of the <br>specified row and the specified column | 
-| AlgComp(`int`, `int`) | Returns the algebraic complement of the<br> matrix of the specified row and the specified column |
-| Display(`string`, `bool`) | Outputs a matrix to the console<br> with the specified text and a new line at the end if the second parameter is **true**| 
-| Pow(`int`) | Returns a matrix to the specified power.<br> `Power must be greater than zero` |  
-| Minor(`int`) | Returns the minor of the matrix of the<br> first row and the specified column |
-| Minor(`int`, `int`) | Returns the minor of the matrix of the <br>specified row and the specified column | 
-| AlgComp(`int`, `int`) | Returns the algebraic complement of the matrix<br> of the specified row and the specified column |
-| Display(`string`, `bool`) | Outputs a matrix to the console with the specified text<br> and a new line at the end if the second parameter is **true**| 
-| SingleMatrix(`int`) |  Returns a unit matrix of size N x N |
-| Reduce | Return a reduced matrix |
+| Methods | Output | What does |
+| ------ | ------ | ------ |
+| Transpose | `Matrix` | Returns the transposed matrix |
+| Determinant | `Fraction` | Returns the determinant of the matrix |
+| CompareSizes(`Matrix`) | `bool` | Checks whether the matrix is the <br>same as the other in size |
+| Clone | `Matrix` | Returns a clone of the matrix |
+| EmptyMatrix(`int`, `int`) | `Matrix` | Returns an N x M matrix filled with zeros |
+| CutColumn(`int`) | `Matrix` | Returns a matrix without the specified column | 
+| CutColumns(`int[]`) | `Matrix` | Returns a matrix without the specified columns |
+| CutRow(`int`) | `Matrix` | Returns a matrix without the specified row | 
+| CutRows(`int[]`) | `Matrix` | Returns a matrix without the specified rows |
+| Pow(`int`) | `Matrix` | Returns a matrix to the specified power. `Power must be greater than zero` |  
+| Minor(`int`) | `Matrix` | Returns the minor of the matrix of the <br>first row and the specified column |
+| Minor(`int`, `int`) | `Matrix` | Returns the minor of the matrix of the <br>specified row and the specified column | 
+| AlgComp(`int`, `int`) | `Fraction` | Returns the algebraic complement of the<br> matrix of the specified row and the specified column |
+| Display(`string`, `bool`) | |Outputs a matrix to the console<br> with the specified text and a new line at the end if the second parameter is **true**| 
+| AlgComp(`int`, `int`) | `Fraction` | Returns the algebraic complement of the matrix<br> of the specified row and the specified column |
+| SingleMatrix(`int`) | `Matrix` | Returns a unit matrix of size N x N |
+| Reduce | `Matrix` | Return a reduced matrix |
 
 ## Fraction
 
@@ -66,31 +62,31 @@ Operations with fractions:
 - Addition, subtraction, multiplication, division of a fraction by a number
 - Addition, subtraction, multiplication, division of a fraction by a fraction
 
-| Properties | What does |
-| ------ | ------ |
-| N | Returns the numerator |
-| D | Returns the denominator |
-| GCD | Returns the  greatest commom diviser |
-| Reduce | Returns a reduced fraction |
+| Properties | Output | What does |
+| ------ | ------ |------ |
+| N | `int` | Returns the numerator |
+| D | `int` |Returns the denominator |
+| GCD | `long` |Returns the  greatest commom diviser |
+| Reduce | `Fraction` | Returns a reduced fraction |
 
-| Methods | What does |
-| ------ | ------ |
-| ReduceArray(`Fraction[]`) | Returns a reduced array of fractions |
-| ReduceArray(`Fraction[,]`) | Returns a reduced two-dimensional array of fractions |
-| GetRawString | Returns an unformatted fraction |
-| ZeroArray(`int`) | Returns an array of fractions equal to zero |
-| ZeroArray(`int`, `int`) | Returns a two-dimensional array of fractions equal to zero |
-| ToFraction(`T`) | Converts a number to a fraction |
-| ToDouble | Converts a number to a double |
-| ToFloat | Converts a number to a float |
-| ToLong | Converts a number to a long |
-| ToInt | Converts a number to a int |
+| Methods | Output | What does |
+| ------ | ------ |------ |
+| ReduceArray(`Fraction[]`) | `Fraction[]` | Returns a reduced array of fractions |
+| ReduceArray(`Fraction[,]`) | `Fraction[,]` |Returns a reduced two-dimensional array of fractions |
+| GetRawString | `string` | Returns an unformatted fraction |
+| ZeroArray(`int`) | `Fraction[]` | Returns an array of fractions equal to zero |
+| ZeroArray(`int`, `int`) | `Fraction[,]` | Returns a two-dimensional array of fractions equal to zero |
+| ToFraction(`T`) | `Fraction` |Converts a number to a fraction |
+| ToDouble | `double` | Converts a number to a double |
+| ToFloat | `float` | Converts a number to a float |
+| ToLong | `long` | Converts a number to a long |
+| ToInt | `int` | Converts a number to a int |
 
 ## Equation
 
 Provides methods for solving matrix equations.
 
-| Methods | What does |
-| ------ | ------ |
-| IsSolvable(`Matrix`) | Returns true if the matrix equation has one solution, otherwise false |
-| KramerMethod(`Matrix`) | Returns the roots of the equation |
+| Methods | Output | What does |
+| ------ | ------ |------ |
+| IsSolvable(`Matrix`) | `bool`| Returns true if the matrix equation has one solution, otherwise false |
+| KramerMethod(`Matrix`) | `Fraction[]` | Returns the roots of the equation |
