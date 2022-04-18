@@ -41,11 +41,11 @@ Operations with matrices:
 | CutColumns(`int[]`) | `Matrix` | Returns a matrix without the specified columns |
 | CutRow(`int`) | `Matrix` | Returns a matrix without the specified row | 
 | CutRows(`int[]`) | `Matrix` | Returns a matrix without the specified rows |
-| Pow(`int`) | `Matrix` | Returns a matrix to the specified power. `Power must be greater than zero` |  
+| Pow(`int`) | `Matrix` | Returns a matrix to the specified power. <br>`Power must be greater than zero` |  
 | Minor(`int`) | `Matrix` | Returns the minor of the matrix of the <br>first row and the specified column |
 | Minor(`int`, `int`) | `Matrix` | Returns the minor of the matrix of the <br>specified row and the specified column | 
 | AlgComp(`int`, `int`) | `Fraction` | Returns the algebraic complement of the<br> matrix of the specified row and the specified column |
-| Display(`string`, `bool`) | |Outputs a matrix to the console<br> with the specified text and a new line at the end if the second parameter is **true**| 
+| Display(`string`, `bool`) | | Outputs a matrix to the console with the specified text<br> and a new line at the end if the second parameter is **true**| 
 | AlgComp(`int`, `int`) | `Fraction` | Returns the algebraic complement of the matrix<br> of the specified row and the specified column |
 | SingleMatrix(`int`) | `Matrix` | Returns a unit matrix of size N x N |
 | Reduce | `Matrix` | Return a reduced matrix |
