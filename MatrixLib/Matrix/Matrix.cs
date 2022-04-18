@@ -41,6 +41,10 @@ namespace MatrixLib
 		{
 			get => values;
 		}
+		public Matrix Red
+		{
+			get => Reduce();
+		}
 		// Indexator
 		public Fraction this[int index, int index2]
 		{

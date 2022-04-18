@@ -54,10 +54,8 @@ namespace MatrixLib
 		}
 		public bool Equals(Fraction B)
 		{	
-			Fraction A = _Reduce(this);
-			Fraction C = _Reduce(B);
-			
-			return A.n == C.n && A.d == C.d;
+			if(n + B.n == 0) return true;
+			return this.ToDouble() == B.ToDouble();
 		}
 		public override int GetHashCode()
 		{

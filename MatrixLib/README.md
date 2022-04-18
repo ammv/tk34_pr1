@@ -28,6 +28,7 @@ Operations with matrices:
 | Inv | Returns the inverse matrix |
 | Rows | Returns the number of rows |
 | Columns | Returns the number of columns |
+| Red | Returns a reduced matrix |
 
 | Methods    | What does |
 | ------ | ------ |

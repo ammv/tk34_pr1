@@ -14,16 +14,10 @@ class Test
 	}
 	public static void TestMatrix()
 	{
-		byte a = 5;
-		ulong b = 345;
-		Fraction c = new Fraction(34,611);
-		Console.WriteLine(Fraction.Add(a, c));
-		Console.WriteLine(Fraction.Add(c, b));
-		Console.WriteLine(Fraction.Add(32d, new Fraction(5,2)));
 		double[,] values = {{1,2,3},
 							{6,34.3, 9.74},
 							{13.5, 64.3, 13.6}};
-		double[,] values2 = {{13,34535,234},
+		double[,] values2 = {{13,345,234},
 							{6,34.3, 454},
 							{-0.5, 111, 13.6}};
 							
@@ -31,7 +25,30 @@ class Test
 		Matrix B = new Matrix(values2);
 		
 		A.Reduce().Display("Matrix A", true);
-		B.Reduce().Display("Matrix B");
+		B.Reduce().Display("Matrix B", true);
+		
+		/* In this code calls follows methods:
+			C.Inv ->
+			1. Determinant ->
+				Minor
+			2. FillAlgAdd ->
+				AlgAdd
+				Minor
+				Determinant
+			3. Transpose
+			4. 1/Determinant * Matrix
+		*/
+		Matrix C = (-A + B).Reduce();
+		Matrix invC = C.Inv;
+		
+		C.Display("Matrix C", true);
+		C.Inv.Display("Matrix inverse C", true);
+		(C * C.Inv).Display("Matrix C * C.Inv, here must be single matrix", true);
+		Console.WriteLine((C*C.Inv).Equals(Matrix.SingleMatrix(3)));
+		
+		Console.WriteLine((A * A).Equals(A.Pow(2)));
+		
+		(A - 1  * (A + 1)).Inv.Reduce().Display();
 	}
 	public static void TestFraction()
 	{

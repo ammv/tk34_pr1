@@ -7,9 +7,14 @@ namespace MatrixLib
 		public override bool Equals(object? obj)
 		{
 			Matrix?	A = obj as Matrix;
-			if(A == null)
-				return false;
-			return values == A.Values;
+			if(A == null) return false;
+			if(!SizeEquals(this, A)) return false;
+			
+			for(int i = 0; i < rows; i++)
+			for(int k = 0; k < columns; k++)
+			if(!this[i,k].Equals(A[i,k])) return false;
+			
+			return true;
 		}
 		public static bool SizeEquals(object? obj1, object? obj2)
 		{
