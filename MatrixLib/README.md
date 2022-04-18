@@ -20,8 +20,8 @@ Operations with matrices:
 - Addition, subtraction, multiplication, division of a matrix by a number
 - Addition, subtraction, multiplication, division of a matrix by a matrix
 
-| Properties | What does |
-| ------ | ------ |
+| Properties | Output | What does |
+| ------ | ------ | ------ |
 | T | `Matrix` | Returns the transposed matrix |
 | Rank | `int`| Returns the rank of the matrix |
 | Det | `Fraction` | Returns the determinant of the matrix |
