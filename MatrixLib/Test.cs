@@ -5,6 +5,9 @@ class Test
 {
 	public static void Main()
 	{
+		Type[] smallTypes = {typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(int), typeof(uint),
+			typeof(long), typeof(ulong), typeof(float), typeof(double), typeof(decimal)};
+			
 		// Small numbers
 		sbyte s1 = -121;
 		byte s2 = 122;
@@ -18,6 +21,9 @@ class Test
 		double s10 = 341.644534;
 		decimal s11 = 24.214M;
 		
+		Type[] bigTypes = {typeof(int), typeof(int), typeof(long), typeof(long), typeof(float), typeof(float),
+		typeof(float), typeof(double), typeof(double), typeof(double), typeof(decimal), typeof(decimal), typeof(decimal)};
+		
 		//Big numbers
 		int b1 = Int32.MaxValue;
 		int b2 = Int32.MinValue;
@@ -30,7 +36,6 @@ class Test
 		double b9 = -0.1234567890123456789;
 		double b10 = 111333444555666.1234567890;
 		decimal b11 = 123133113.22342432242m;
-		Console.WriteLine(b11);
 		decimal b12 = -0.222333444555m;
 		decimal b13 = 12345678234234.22342432242m;
 		
@@ -101,6 +106,59 @@ class Test
 		Console.WriteLine("\n#4 Test reduce big fractions");
 		for(int i = 0; i < bigNums.Length; i++)
 			Console.WriteLine("bf{0} = {1}\nAfter reduce: {2}\n", i+1, bigNums[i], bigNums[i].Reduce);
+		
+		// Test arithmetic operations
+		object[] sNums = {s1, s2, s3, s4, s5, s6, s7, s8, s9, s10, s11};
+		object[] bNums = {b1, b2, b3, b4, b5, b6, b7, b8, b9, b10, b11, b12, b13};
+		char[] ops = {'-', '+', '*', '/'};
+		
+		Console.WriteLine("#5 Arithmetic operations with small nums");
+		for(int i = 0; i < smallNums.Length; i++)
+		{
+			switch(ops[i%4])
+			{
+				case '-':
+					Console.WriteLine("{0} - {1} = {2}", 
+						smallNums[i], sNums[i], smallNums[i] - (dynamic)Convert.ChangeType(sNums[i], smallTypes[i]));
+						break;
+				case '+':
+					Console.WriteLine("{0} + {1} = {2}", 
+						smallNums[i], sNums[i], smallNums[i] + (dynamic)Convert.ChangeType(sNums[i], smallTypes[i]));
+						break;
+				case '*':
+					Console.WriteLine("{0} * {1} = {2}", 
+						smallNums[i], sNums[i], smallNums[i] * (dynamic)Convert.ChangeType(sNums[i], smallTypes[i]));
+						break;
+				case '/':
+					Console.WriteLine("{0} / {1} = {2}", 
+						smallNums[i], sNums[i], smallNums[i] / (dynamic)Convert.ChangeType(sNums[i], smallTypes[i]));
+						break;
+			}
+		}
+		Console.WriteLine("\n\n#6 Arithmetic operations with big nums");
+		
+		for(int i = 0; i < bigNums.Length; i++)
+		{
+			switch(ops[i%4])
+			{
+				case '-':
+					Console.WriteLine("{0} - {1} = {2}", 
+						bigNums[i], bNums[i], bigNums[i] - (dynamic)Convert.ChangeType(bNums[i], bigTypes[i]));
+						break;
+				case '+':
+					Console.WriteLine("{0} + {1} = {2}", 
+						bigNums[i], bNums[i], bigNums[i] + (dynamic)Convert.ChangeType(bNums[i], bigTypes[i]));
+						break;
+				case '*':
+					Console.WriteLine("{0} * {1} = {2}", 
+						bigNums[i], bNums[i], bigNums[i] * (dynamic)Convert.ChangeType(bNums[i], bigTypes[i]));
+						break;
+				case '/':
+					Console.WriteLine("{0} / {1} = {2}", 
+						bigNums[i], bNums[i], bigNums[i] / (dynamic)Convert.ChangeType(bNums[i], bigTypes[i]));
+						break;
+			}
+		}
 		
 		Console.ReadLine();
 	}
