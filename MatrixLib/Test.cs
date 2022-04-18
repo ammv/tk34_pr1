@@ -5,6 +5,36 @@ class Test
 {
 	public static void Main()
 	{
+		//TestFraction();
+		TestMatrix();
+		TestEquation();
+	}
+	public static void TestEquation()
+	{
+	}
+	public static void TestMatrix()
+	{
+		byte a = 5;
+		ulong b = 345;
+		Fraction c = new Fraction(34,611);
+		Console.WriteLine(Fraction.Add(a, c));
+		Console.WriteLine(Fraction.Add(c, b));
+		Console.WriteLine(Fraction.Add(32d, new Fraction(5,2)));
+		double[,] values = {{1,2,3},
+							{6,34.3, 9.74},
+							{13.5, 64.3, 13.6}};
+		double[,] values2 = {{13,34535,234},
+							{6,34.3, 454},
+							{-0.5, 111, 13.6}};
+							
+		Matrix A = new Matrix(values);
+		Matrix B = new Matrix(values2);
+		
+		A.Reduce().Display("Matrix A", true);
+		B.Reduce().Display("Matrix B");
+	}
+	public static void TestFraction()
+	{
 		Type[] smallTypes = {typeof(sbyte), typeof(byte), typeof(short), typeof(ushort), typeof(int), typeof(uint),
 			typeof(long), typeof(ulong), typeof(float), typeof(double), typeof(decimal)};
 			
@@ -160,6 +190,23 @@ class Test
 			}
 		}
 		// Test Fraction methods
+		Console.WriteLine("#7 Methods");
+		for(int i = 0; i < bigNums.Length; i++)
+		{
+			Console.WriteLine("Raw fraction " + bigNums[i].GetRawString());
+			Console.WriteLine("Fraction to double " + bigNums[i].ToDouble());
+			Console.WriteLine("Fraction to int " + bigNums[i].ToInt());
+			Console.WriteLine("Fraction to long " + bigNums[i].ToLong());
+			Console.WriteLine("Fraction to float " + bigNums[i].ToFloat());
+			Console.WriteLine();
+		}
+		Console.WriteLine("ZeroArray method");
+		Console.WriteLine(Fraction.ZeroArray(6));
+		Console.WriteLine(Fraction.ZeroArray(6, 2));
+		
+		Console.WriteLine("Reduce method");
+		Console.WriteLine(Fraction.ReduceArray(Fraction.ZeroArray(6)));
+		Console.WriteLine(Fraction.ReduceArray(Fraction.ZeroArray(6, 2)));
 		
 		Console.ReadLine();
 	}
