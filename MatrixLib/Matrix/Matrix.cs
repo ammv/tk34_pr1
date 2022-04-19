@@ -61,6 +61,16 @@ namespace MatrixLib
 			for(int k = 0; k < columns; k++)
 			this.values[i,k] = Fraction.ToFraction(values[i,k]);
 		}
+		public Matrix(long[,] values)
+		{
+			this.rows = values.GetLength(0);
+			this.columns = values.GetLength(1);
+			this.values = new Fraction[rows, columns];
+			
+			for(int i = 0; i < rows; i++)
+			for(int k = 0; k < columns; k++)
+			this.values[i,k] = Fraction.ToFraction(values[i,k]);
+		}
 		public Matrix(Fraction[,] values)
 		{
 			this.rows = values.GetLength(0);

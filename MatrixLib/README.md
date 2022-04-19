@@ -20,6 +20,12 @@ Operations with matrices:
 - Addition, subtraction, multiplication, division of a matrix by a number
 - Addition, subtraction, multiplication, division of a matrix by a matrix
 
+| Constructors | What does |
+| ------------ | --------- |
+| Matrix(`double[,]`) | Transform `double[,]` into `Fraction[,]` |
+| Matrix(`long[,]`) | Transform `long[,]` into `Fraction[,]` |
+| Matrix(`Fraction[,]`) | just assigns values to fields |
+
 | Properties | Output | What does |
 | ------ | ------ | ------ |
 | T | `Matrix` | Returns the transposed matrix |
@@ -61,6 +67,12 @@ A fraction can be created from the following types:
 Operations with fractions:
 - Addition, subtraction, multiplication, division of a fraction by a number
 - Addition, subtraction, multiplication, division of a fraction by a fraction
+
+| Constructors | What does |
+| ------------ | --------- |
+| Fraction(`long`, `long`) | Creates a fraction with the specified<br>numerator and the specified denominator | 
+| Fraction(`long`) | Create a fraction with the specified<br>numerator and the denominator equals to 1 |
+| Fraction() | Creates a fraction with a numerator equal<br>to zero and a denominator equal to 1 |
 
 | Properties | Output | What does |
 | ------ | ------ |------ |
