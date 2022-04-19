@@ -3,7 +3,7 @@ using System;
 
 class Test
 {
-	public static void Main()
+	public static void Run()
 	{
 		TestFraction();
 		TestMatrix();
@@ -11,7 +11,8 @@ class Test
 	}
 	public static void TestEquation()
 	{
-		double[,] equation = {{3,5,1,484.5}, //2,4, 234.2355
+		double[,] equation = {{3,5,1,484.5},
+		
 							  {-244,-54,6, -25549.0},
 							  {33,-22,11, -21235.5}};
 		
