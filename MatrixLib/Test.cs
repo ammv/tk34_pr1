@@ -5,12 +5,30 @@ class Test
 {
 	public static void Main()
 	{
-		//TestFraction();
+		TestFraction();
 		TestMatrix();
 		TestEquation();
 	}
 	public static void TestEquation()
 	{
+		double[,] equation = {{3,5,1,484.5}, //2,4, 234.2355
+							  {-244,-54,6, -25549.0},
+							  {33,-22,11, -21235.5}};
+		
+		Matrix A = new Matrix(equation);
+		
+		bool isSolvable = Equation.IsSolvable(A);
+		
+		if(isSolvable)
+		{
+			Console.WriteLine("Solvable equation");
+			Fraction[] roots = Equation.KramerMethod(A);
+			for(int i = 0; i < roots.Length; i++)
+				Console.WriteLine("x{0} = {1}", i+1, roots[i].ToDouble());
+		}
+		else
+			Console.WriteLine("Unsolable equation");
+			
 	}
 	public static void TestMatrix()
 	{
