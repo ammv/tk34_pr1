@@ -44,6 +44,10 @@ namespace MatrixLib
 				return rows*columns*sum;
 			}
 		}
+		public bool hasInverse()
+		{
+			return Determinant() == 0 ? false : true;
+		}
 		public Matrix Clone()
 		{
 			Fraction[,] result = new Fraction[rows, columns];

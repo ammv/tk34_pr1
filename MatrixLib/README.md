@@ -55,6 +55,7 @@ Operations with matrices:
 | AlgComp(`int`, `int`) | `Fraction` | Returns the algebraic complement of the matrix<br> of the specified row and the specified column |
 | SingleMatrix(`int`) | `Matrix` | Returns a unit matrix of size N x N |
 | Reduce | `Matrix` | Return a reduced matrix |
+| hasInverse | `bool` | returns a value indicating whether it is<br>possible to get an inverse matrix from the matrix |
 
 ## Fraction
 
