@@ -149,5 +149,22 @@ namespace MatrixLib
 		public static Fraction operator /(Fraction A, float B) => ToFraction(B) / A;
 		public static Fraction operator /(Fraction A, double B) => ToFraction(B) / A;
 		public static Fraction operator /(Fraction A, decimal B) => ToFraction(B) / A;
+		
+		public static bool operator >(Fraction A, Fraction B)
+		{
+			return A.ToDouble() > B.ToDouble();
+		}
+		public static bool operator >=(Fraction A, Fraction B)
+		{
+			return A.ToDouble() >= B.ToDouble();
+		}
+		public static bool operator <(Fraction A, Fraction B)
+		{
+			return A.ToDouble() < B.ToDouble();
+		}
+		public static bool operator <=(Fraction A, Fraction B)
+		{
+			return A.ToDouble() <= B.ToDouble();
+		}
 	}
 }

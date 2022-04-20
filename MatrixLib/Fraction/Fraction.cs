@@ -8,6 +8,8 @@ namespace MatrixLib
 		long n;
 		long d;
 		
+		public static Fraction Zero = new Fraction(0L,1L);
+		
 		public long N
 		{
 			get => n;
