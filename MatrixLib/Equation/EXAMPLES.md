@@ -2,8 +2,7 @@
 
 ## Solve equation
 ```cs
-double[,] values = {{1,4, 2},
-					{5,1,7}};
+double[,] values = {{1,4, 2},{5,1,7}};
 Matrix A = new Matrix(values);
 if(Equation.IsSolvable(A))
 {

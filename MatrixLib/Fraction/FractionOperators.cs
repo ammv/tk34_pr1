@@ -166,5 +166,28 @@ namespace MatrixLib
 		{
 			return A.ToDouble() <= B.ToDouble();
 		}
+		public static implicit operator Fraction(sbyte A) => ToFraction(A);
+		public static implicit operator Fraction(byte A) => ToFraction(A);
+		public static implicit operator Fraction(short A) => ToFraction(A);
+		public static implicit operator Fraction(ushort A) => ToFraction(A);
+		public static implicit operator Fraction(int A) => ToFraction(A);
+		public static implicit operator Fraction(uint A) => ToFraction(A);
+		public static implicit operator Fraction(long A) => ToFraction(A);
+		public static implicit operator Fraction(ulong A) => ToFraction(A);
+		public static implicit operator Fraction(float A) => ToFraction(A);
+		public static implicit operator Fraction(double A) => ToFraction(A);
+		public static implicit operator Fraction(decimal A) => ToFraction(A);
+		
+		public static explicit operator sbyte(Fraction A) => (sbyte)((sbyte)A.n/(sbyte)A.d);
+		public static explicit operator byte(Fraction A) => (byte)((byte)A.n/(byte)A.d);
+		public static explicit operator short(Fraction A) => (short)((short)A.n/(short)A.d);
+		public static explicit operator ushort(Fraction A) => (ushort)((ushort)A.n/(ushort)A.d);
+		public static explicit operator int(Fraction A) => (int)A.n/(int)A.d;
+		public static explicit operator uint(Fraction A) => (uint)A.n/(uint)A.d;
+		public static explicit operator long(Fraction A) => A.n/A.d;
+		public static explicit operator ulong(Fraction A) => (ulong)A.n/(ulong)A.d;
+		public static explicit operator float(Fraction A) => (float)A.n/A.d;
+		public static explicit operator double(Fraction A) => (double)A.n/A.d;
+		public static explicit operator decimal(Fraction A) => (decimal)A.n/A.d;
 	}
 }
