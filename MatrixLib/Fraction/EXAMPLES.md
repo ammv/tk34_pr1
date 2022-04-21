@@ -20,3 +20,19 @@ Fraction C = (A + B) / x;
 Fraction D = (C * pi) + (x + A) * -B;
 Console.WriteLine(D);
 ```
+
+## Operations with arrays
+```cs
+int n = 10;
+Fraction[] A = new Fraction[n];
+Fraction[] B = Fraction.ZeroArray(n);
+for(int i = 0; i < n; i++)
+{
+	A[i] = (B[i] - new Fraction(i, i*i+1))*2;
+	Console.WriteLine(A[i]);
+}
+Console.WriteLine();
+
+for(int i = 0; i < n; i++)
+Console.WriteLine(B[i] - A[i]);
+```

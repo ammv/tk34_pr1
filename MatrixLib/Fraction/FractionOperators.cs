@@ -2,7 +2,7 @@ using System;
 
 namespace MatrixLib
 {
-	public partial class Fraction
+	public partial struct Fraction
 	{
 		// Add
 		public static Fraction operator +(Fraction A, Fraction B)

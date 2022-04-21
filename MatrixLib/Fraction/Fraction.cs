@@ -2,13 +2,13 @@ using System;
 
 namespace MatrixLib
 {
-	public partial class Fraction
+	public partial struct Fraction
 	{
 		// Numerator and denominator
 		long n;
 		long d;
 		
-		public static Fraction Zero = new Fraction(0L,1L);
+		public static readonly Fraction Zero = new Fraction();
 		
 		public long N
 		{
@@ -57,8 +57,7 @@ namespace MatrixLib
 		}
 		public Fraction()
 		{
-			this.n = 0;
-			this.d = 1;
+			this = Zero;
 		}
 	}
 }

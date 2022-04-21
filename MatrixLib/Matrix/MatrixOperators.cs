@@ -109,7 +109,7 @@ namespace MatrixLib
 			
 		// matrix multiple
 		public static Matrix operator *(Matrix A, Matrix B) =>
-			ComputeOP(A, B);
+			ComputeOP(A, B, (x,y) => x * y);
 			
 		// matrix division
 		public static Matrix operator /(Matrix A, Matrix B) =>

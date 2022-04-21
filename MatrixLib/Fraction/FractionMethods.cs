@@ -2,7 +2,7 @@ using System;
 
 namespace MatrixLib
 {
-	public partial class Fraction
+	public partial struct Fraction
 	{
 		private static long _GCD(Fraction A)
 		{
@@ -99,19 +99,17 @@ namespace MatrixLib
 		public static Fraction[,] ZeroArray(int rows, int columns)
 		{
 			Fraction[,] zeros = new Fraction[rows, columns];
-			Fraction zero = new Fraction();
 			for(int i = 0; i < rows; i++)
 			for(int k = 0; k < columns; k++)
-			zeros[i,k] = zero;
+			zeros[i,k] = Zero;
 		
 			return zeros;
 		}
 		public static Fraction[] ZeroArray(int columns)
 		{
 			Fraction[] zeros = new Fraction[columns];
-			Fraction zero = new Fraction();
 			for(int i = 0; i < columns; i++)
-			zeros[i] = zero;
+			zeros[i] = Zero;
 		
 			return zeros;
 		}

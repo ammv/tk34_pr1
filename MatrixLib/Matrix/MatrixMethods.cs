@@ -46,7 +46,7 @@ namespace MatrixLib
 		}
 		public bool hasInverse()
 		{
-			return Determinant() == Fraction.Zero ? false : true;
+			return Determinant().Equals(Fraction.Zero) ? false : true;
 		}
 		public Matrix Clone()
 		{
