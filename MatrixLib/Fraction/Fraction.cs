@@ -57,7 +57,8 @@ namespace MatrixLib
 		}
 		public Fraction()
 		{
-			this = Zero;
+			n = 0;
+			d = 1;
 		}
 	}
 }

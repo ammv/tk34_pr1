@@ -26,21 +26,15 @@ namespace MatrixLib
 		}
 		public static Fraction[] ReduceArray(Fraction[] A)
 		{
-			long gcd;
 			for(int i = 0; i < A.Length; i++)
-			{
-				gcd = _GCD(A[i]);
 				A[i] = _Reduce(A[i]);
-			}
 			return A;
 		}
 		public static Fraction[,] ReduceArray(Fraction[,] A)
 		{
-			long gcd;
 			for(int i = 0; i < A.GetLength(0); i++)
 			for(int k = 0; k < A.GetLength(1); k++)
 			{
-				gcd = _GCD(A[i,k]);
 				A[i, k] = _Reduce(A[i, k]);
 			}
 			return A;
@@ -66,14 +60,12 @@ namespace MatrixLib
 		}
 		public override string ToString()
 		{
-			if(d == 1)
-			{
-				return n.ToString();
-			}
 			if(n == 0)
-			{
 				return "0";
-			}
+			if(d == 1)
+				return n.ToString();
+			if(d == -1)
+				return "-" + n.ToString();
 			return n + "/" + d;
 		}
 		public string GetRawString()

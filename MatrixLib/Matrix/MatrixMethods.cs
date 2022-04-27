@@ -44,7 +44,7 @@ namespace MatrixLib
 				return rows*columns*sum;
 			}
 		}
-		public bool hasInverse()
+		public bool IsInvertible()
 		{
 			return Determinant().Equals(Fraction.Zero) ? false : true;
 		}
