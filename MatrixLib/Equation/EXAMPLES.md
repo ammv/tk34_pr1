@@ -2,7 +2,11 @@
 
 ## KramerMethod
 ```cs
+<<<<<<< HEAD
 double[,] values = {{1,4, 2},{5,1,7}};
+=======
+double[,] values = {{1,4, 2}, {5,1,7}};
+>>>>>>> 4f0fe9d62ea88ea912fb85d781b653eebc0964a5
 Matrix A = new Matrix(values);
 if(Equation.IsSolvable(A))
 {
@@ -15,6 +19,7 @@ if(Equation.IsSolvable(A))
 else
 Console.WriteLine("Equation is unsolvable!");
 ```
+<<<<<<< HEAD
 
 ## Matrix Method Ax = b
 ```cs
@@ -31,3 +36,5 @@ if(Equation.IsSolvable(A))
 else
 Console.WriteLine("Equation is unsolvable!");
 ```
+=======
+>>>>>>> 4f0fe9d62ea88ea912fb85d781b653eebc0964a5
