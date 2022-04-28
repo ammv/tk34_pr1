@@ -4,4 +4,6 @@ obj/
 *.old
 *.pub
 TODO.*
-Test2.cs
+Test2.*
+Test.*
+TimeTest.*

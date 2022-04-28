@@ -8,7 +8,7 @@ namespace MatrixLib
 		private static Matrix ComputeOP(Matrix A, Matrix B)
 		{
 			if(A.columns != B.rows)
-				throw new Exception("Matrix A must have the number of columns equal to the number of rows of matrix B");
+				throw new SizeMatrixException("Matrix A must have the number of columns equal to the number of rows of matrix B");
 			
 			Fraction[,] values = Fraction.ZeroArray(A.rows, B.columns);
 			

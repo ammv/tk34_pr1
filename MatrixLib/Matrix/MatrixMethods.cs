@@ -2,6 +2,14 @@ using System;
 
 namespace MatrixLib
 {
+	class SizeMatrixException: Exception
+	{
+		public SizeMatrixException(string text): base(text){}
+	}
+	class DeterminantException: Exception
+	{
+		public DeterminantException(string text): base(text){}
+	}
 	public partial class Matrix
 	{
 		public override bool Equals(object? obj)
@@ -201,7 +209,7 @@ namespace MatrixLib
 		{
 			Fraction det = Determinant();
 			if(det.ToDouble() == 0d)
-				throw new Exception("Can`t calculate inverse matrix, because its determinant equals 0");
+				throw new DeterminantException("Can`t calculate inverse matrix, because its determinant equals 0");
 			return 1/det * FillAlgAdd().T;
 		}
 		public Matrix Reduce()
@@ -236,7 +244,7 @@ namespace MatrixLib
 			{
 				string ErrorMessage = "A matrix having a different number of rows and columns has no determinant\n";
 					ErrorMessage += String.Format("rows({0}) != columns({1})",rows, columns);
-				throw new Exception(ErrorMessage);
+				throw new SizeMatrixException(ErrorMessage);
 			}
 			if(Rank == 1) return this[0,0];
 			if(Rank == 2) return DetRank2();
