@@ -19,7 +19,6 @@ if(Equation.IsSolvable(A))
 else
 Console.WriteLine("Equation is unsolvable!");
 ```
-<<<<<<< HEAD
 
 ## Matrix Method Ax = b
 ```cs
@@ -36,5 +35,3 @@ if(Equation.IsSolvable(A))
 else
 Console.WriteLine("Equation is unsolvable!");
 ```
-=======
->>>>>>> 4f0fe9d62ea88ea912fb85d781b653eebc0964a5
